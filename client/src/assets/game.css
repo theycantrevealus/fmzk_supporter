@@ -1,0 +1,165 @@
+.item-table td {
+  position: relative;
+}
+
+.bg-tier-0 {
+  background: #ff85e0 !important;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 133, 224, 1) 0%,
+    rgba(255, 255, 255, 1) 40%,
+    rgba(255, 255, 255, 1) 100%
+  ) !important;
+}
+
+.bg-tier-1 {
+  background: #828285 !important;
+  background: linear-gradient(
+    90deg,
+    rgba(130, 130, 133, 1) 0%,
+    rgba(255, 255, 255, 1) 40%,
+    rgba(255, 255, 255, 1) 100%
+  ) !important;
+}
+
+.bg-tier-2 {
+  background: #dbcbc5 !important;
+  background: linear-gradient(
+    90deg,
+    rgba(219, 203, 197, 1) 0%,
+    rgba(255, 255, 255, 1) 40%,
+    rgba(255, 255, 255, 1) 100%
+  ) !important;
+}
+
+.bg-tier-3 {
+  background: #99ba91 !important;
+  background: linear-gradient(
+    90deg,
+    rgba(153, 186, 145, 1) 0%,
+    rgba(255, 255, 255, 1) 40%,
+    rgba(255, 255, 255, 1) 100%
+  ) !important;
+}
+
+.bg-tier-4 {
+  background: #a8d4ff !important;
+  background: linear-gradient(
+    90deg,
+    rgba(168, 212, 255, 1) 0%,
+    rgba(255, 255, 255, 1) 40%,
+    rgba(255, 255, 255, 1) 100%
+  ) !important;
+}
+
+.bg-tier-5 {
+  background: #ff8a8a !important;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 138, 138, 1) 0%,
+    rgba(255, 255, 255, 1) 40%,
+    rgba(255, 255, 255, 1) 100%
+  ) !important;
+}
+
+.bg-tier-6 {
+  background: #ffd294 !important;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 210, 148, 1) 0%,
+    rgba(255, 255, 255, 1) 40%,
+    rgba(255, 255, 255, 1) 100%
+  ) !important;
+}
+
+.bg-tier-7 {
+  background: #fcff96 !important;
+  background: linear-gradient(
+    90deg,
+    rgba(252, 255, 150, 1) 0%,
+    rgba(255, 255, 255, 1) 40%,
+    rgba(255, 255, 255, 1) 100%
+  ) !important;
+}
+
+.bg-tier-8 {
+  background: #f0f0f0 !important;
+  background: linear-gradient(
+    90deg,
+    rgba(240, 240, 240, 1) 0%,
+    rgba(255, 255, 255, 1) 40%,
+    rgba(255, 255, 255, 1) 100%
+  ) !important;
+}
+
+.bg-enchantment-0 td:first-child:after {
+  content: "";
+  position: absolute;
+  z-index: 20;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 10px;
+  background: transparent !important;
+}
+
+.bg-enchantment-1 td:first-child:after {
+  content: "";
+  position: absolute;
+  z-index: 20;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 40px;
+  background: #94ffdf;
+  background: linear-gradient(
+    90deg,
+    rgba(148, 255, 223, 1) 0%,
+    transparent 100%
+  );
+}
+
+.bg-enchantment-2 td:first-child:after {
+  content: "";
+  position: absolute;
+  z-index: 20;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 40px;
+  background: #70a9ff;
+  background: linear-gradient(
+    90deg,
+    rgba(112, 169, 255, 1) 0%,
+    transparent 100%
+  );
+}
+
+.bg-enchantment-3 td:first-child:after {
+  content: "";
+  position: absolute;
+  z-index: 20;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 40px;
+  background: #cd91ff;
+  background: linear-gradient(
+    90deg,
+    rgba(205, 145, 255, 1) 0%,
+    transparent 100%
+  );
+}
+
+.bg-enchantment-4 td:first-child:after {
+  content: "";
+  position: absolute;
+  z-index: 20;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 40px;
+  background: #cd91ff;
+  background: #fffb00;
+  background: linear-gradient(90deg, rgba(255, 251, 0, 1) 0%, transparent 100%);
+}

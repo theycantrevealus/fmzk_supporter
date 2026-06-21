@@ -82,7 +82,7 @@ const items = [
       {
         label: "Craft Planner",
         icon: "pi pi-info-circle",
-        command: () => router.push("/about"),
+        command: () => router.push("/crafting_plan"),
       },
       {
         label: "Craft Simulator",

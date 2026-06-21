@@ -1,36 +1,42 @@
 import { Prop, raw, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { Schema as MongoSchema, HydratedDocument } from 'mongoose';
+import { HydratedDocument } from 'mongoose';
 
 export type MasterItemDocument = HydratedDocument<MasterItem>;
 
 @Schema({ collection: 'items' })
 export class MasterItem {
-  @Prop({ alias: '@unique_name' })
+  @Prop()
+  uniquename: string;
+
+  @Prop()
   name: string;
 
-  @Prop({ alias: '@tier' })
+  @Prop()
   tier: string;
+
+  @Prop()
+  enhancement: string;
 
   @Prop()
   classification: string;
 
-  @Prop({ alias: '@shopcategory' })
+  @Prop()
   shopcategory: string;
 
-  @Prop({ alias: '@craftingcategory' })
+  @Prop()
   craftcategory: string;
 
-  @Prop({ alias: '@shopsubcategory1' })
-  subcat1: string;
+  @Prop()
+  shopsubcategory1: string;
 
-  @Prop({ alias: '@shopsubcategory2' })
-  subcat2: string;
+  @Prop()
+  shopsubcategory2: string;
 
-  @Prop({ alias: 'enhancements', type: MongoSchema.Types.Mixed })
-  enhance: object;
+  // @Prop()
+  // craftingrequirements: any;
 
-  @Prop({ alias: 'craftingrequirements' })
-  crafting_requirement: number;
+  // @Prop()
+  // craftingdetail: any;
 
   @Prop()
   remark: string;

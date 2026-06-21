@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <h2>Home</h2>
   <Button icon="pi pi-home" aria-label="Save" />
   <Button label="Profile" icon="pi pi-user" />
@@ -9,4 +9,18 @@
 
 <script setup>
 import Button from "primevue/button";
+</script> -->
+
+<template>
+  <div class="card"></div>
+</template>
+
+<script lang="ts">
+import { defineComponent } from "vue";
+
+export default defineComponent({
+  name: "Home",
+  components: {},
+  data() {},
+});
 </script>

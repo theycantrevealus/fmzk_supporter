@@ -17,7 +17,7 @@ def format_name(value):
     level_match = re.search(r'_LEVEL(\d+)\b', value)
     tier_match = re.search(r'^T(\d+)', value)
 
-    enhancement = int(level_match.group(1)) if level_match else 0
+    enchantment = int(level_match.group(1)) if level_match else 0
     tier = int(tier_match.group(1)) if tier_match else 0
 
     name = re.sub(r'_LEVEL\d+\b', '', value)
@@ -26,7 +26,7 @@ def format_name(value):
 
     return {
         "name": name,
-        "enhancement": enhancement,
+        "enchantment": enchantment,
         "tier": tier,
     }
 
@@ -55,7 +55,9 @@ def normalize_craftingrequirements(cr):
         "@time": "time",
         "@craftingfocus": "focus",
         "@uniquename": "uniquename",
-        "@count": "count"
+        "@count": "count",
+        "@amountcrafted": "amountcrafted",
+        "@enchantmentlevel": "enchantmentlevel"
     }
 
     result = {}
@@ -85,14 +87,15 @@ def normalize_craftingrequirements(cr):
 
         new_value = normalize_craftingrequirements(v)
 
-        if new_key in {"silver", "time", "focus", "count"}:
+        if new_key in {"silver", "time", "focus", "count", "enchantmentlevel"}:
             new_value = to_int(new_value)
 
         if new_key == "uniquename":
             parsed = format_name(new_value)
 
             result["name"] = parsed["name"]
-            result["enhancement"] = parsed["enhancement"]
+            result["uniquename"] = new_value
+            result["enchantment"] = parsed["enchantment"]
             result["tier"] = parsed["tier"]
             continue
 
@@ -155,7 +158,7 @@ with open("items.json", "r", encoding="utf-8") as f:
         "@shopsubcategory2": "shopsubcategory2",
         "@tier": "tier",
         "@craftingcategory": "craftingcategory",
-        "enchantments": "enchantment_detail",
+        "enchantments": "enchantmentdetail",
         "craftingrequirements": "craftingrequirements",
         "classification": "classification"
     }
@@ -169,7 +172,7 @@ with open("items.json", "r", encoding="utf-8") as f:
     #     .apply(pd.Series)
     # )
 
-    df[['name', 'enhancement', 'tier']] = (
+    df[['name', 'enchantment', 'tier']] = (
         df['uniquename']
         .apply(format_name)
         .apply(pd.Series)

@@ -9,4 +9,9 @@ export class MasterItemController {
   async all(@Query('lazyEvent') parameter: string) {
     return this.masterItemService.all(parameter);
   }
+
+  @Get('find')
+  async find(@Query('lazyEvent') parameter: string) {
+    return this.masterItemService.all(parameter);
+  }
 }

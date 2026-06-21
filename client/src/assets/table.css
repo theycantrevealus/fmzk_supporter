@@ -1,0 +1,14 @@
+.custom-grid-table {
+  border-collapse: collapse !important;
+}
+
+.custom-grid-table,
+.custom-grid-table th,
+.custom-grid-table td {
+  border: 1px solid #ccc !important;
+  padding: 0.25rem 0.75rem;
+}
+
+.wrap-content {
+  word-wrap: break-word !important;
+}

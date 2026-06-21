@@ -24,4 +24,17 @@ export class MasterItemService {
       throw error;
     }
   }
+
+  async find(payload: any) {
+    try {
+      const parameter: PrimeParameter = JSON.parse(payload);
+      return await prime_datatable(parameter, this.masterItemModel).catch(
+        (error: Error) => {
+          throw error;
+        },
+      );
+    } catch (error) {
+      throw error;
+    }
+  }
 }
